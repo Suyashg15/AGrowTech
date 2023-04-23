@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../static/styles/style1.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Linking BoxIcon for Icon -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- favicon -->
+    <link rel="icon" href="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20data-name%3D%22glipy%20copy%22%20viewBox%3D%220%200%2064%2064%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22a%22%20x1%3D%224%22%20x2%3D%2260%22%20y1%3D%2232%22%20y2%3D%2232%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%239cffac%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%2300b59c%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cpath%20fill%3D%22url(%23a)%22%20d%3D%22M45.62085%2C55.3194a.99958.99958%2C0%2C0%2C1-.407%2C1.35363%2C27.91974%2C27.91974%2C0%2C0%2C1-13.19538%2C3.30738C11.18872%2C60.24213-2.71271%2C37.0097%2C7.34473%2C18.80334a.99976.99976%2C0%2C0%2C1%2C1.76019.94782c-11.92938%2C22.6535%2C12.52%2C47.08673%2C35.16248%2C35.16205A.99892.99892%2C0%2C0%2C1%2C45.62085%2C55.3194ZM32.01849%2C4.0174A28.01932%2C28.01932%2C0%2C0%2C0%2C18.95972%2C7.25159a.99926.99926%2C0%2C0%2C0%2C.93493%2C1.76635%2C26.00762%2C26.00762%2C0%2C0%2C1%2C12.12354-3.0017C51.289%2C5.773%2C64.21252%2C27.21246%2C55.00037%2C44.11145a.99936.99936%2C0%2C1%2C0%2C1.76446.9389A27.974%2C27.974%2C0%2C0%2C0%2C32.01849%2C4.0174ZM12.99255%2C17.85931c6.60566-.20983%2C6.60566-9.7835%2C0-9.9934C6.39691%2C8.07581%2C6.3869%2C17.64948%2C12.99255%2C17.85931ZM51.14734%2C46.0307c-6.59564.19989-6.59564%2C9.77356%2C0%2C9.99341C57.753%2C55.81421%2C57.753%2C46.2406%2C51.14734%2C46.0307ZM31.2829%2C11.447c-.74121%2C1.27051-6.69141%2C9.28931-5.464%2C12.94183%2C2.08459.53443%2C5.18182%2C1.70881%2C6.15192%2C2.83185.12463.141.13238.15546.25927-.00006.96021-1.119%2C4.074-2.293%2C6.152-2.83166%2C1.23029-3.64-4.72437-11.68824-5.46393-12.94208A1.02976%2C1.02976%2C0%2C0%2C0%2C31.2829%2C11.447ZM19.89636%2C26.51263a46.43783%2C46.43783%2C0%2C0%2C0%2C1.51557%2C6.08216c2.93567.58368%2C6.88464%2C1.40747%2C9.522%2C3.021a5.23136%2C5.23136%2C0%2C0%2C0-.02-6.60046c-1.51654-2.10468-8.30243-3.35248-9.861-3.6593A.99828.99828%2C0%2C0%2C0%2C19.89636%2C26.51263Zm12.2041%2C26.38251a1%2C1%2C0%2C0%2C0%2C.99707-.99713V44.57953a5.24061%2C5.24061%2C0%2C0%2C0%2C7.93671.64807c1.78473-1.78473%2C3.041-8.23572%2C3.27033-9.512a.99065.99065%2C0%2C0%2C0-.27912-.88733c-.69049-.56555-1.16394-.14856-2.15375-.02008-3.414.82946-9.57055%2C1.71478-9.78106%2C6.36145-.14435-4.65015-6.4029-5.53955-9.76148-6.36139-.99127-.13-1.46374-.54535-2.15368.0199a.991.991%2C0%2C0%2C0-.27912.88745c.30066%2C1.73858%2C1.68439%2C8.10015%2C3.27045%2C9.512a5.24039%2C5.24039%2C0%2C0%2C0%2C7.93658-.64813V51.898A1%2C1%2C0%2C0%2C0%2C32.10046%2C52.89514ZM43.148%2C25.35608a46.07654%2C46.07654%2C0%2C0%2C0-5.9325%2C1.47565%2C9.84888%2C9.84888%2C0%2C0%2C0-3.57952%2C1.79467%2C5.24411%2C5.24411%2C0%2C0%2C0-.36884%2C6.98951c2.6557-1.604%2C6.54767-2.447%2C9.512-3.01123a45.33654%2C45.33654%2C0%2C0%2C0%2C1.52552-6.09205A.99822.99822%2C0%2C0%2C0%2C43.148%2C25.35608Z%22%2F%3E%3C%2Fsvg%3E" />
+    <title>Crop Prediction</title>
+  </head>
+  <body>
+    
+    <!-- main content -->
+    <div class="wrapper">
+      
+      <nav>
+        <h1>AGrowTech</h1>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="{{url_for('crop_recommend')}}">Crop & Weather</a></li>
+          <li><a href="{{url_for('irrigation')}}">Irrigation</a></li>
+          <li><a href="/">Disease</a></li>
+        </ul>
+        
+      </nav>
+      <hr>
+      <h1>Crop Recomender</h1>
+      <section class="input-part">
+        <p class="info-txt"></p>
+        <div class="content">
+          <div id="google_translate_element"></div>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+      }
+      </script>
+      
+      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  
+          <form method="POST" action="{{ url_for('crop_prediction') }}">
+            <div class="form-group">
+              <label for="City"></label>
+              <input
+                type="text"
+                spellcheck="false"
+                placeholder="Enter City Name"
+                id="City"
+                class="form-control"
+                name="city"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="Nitrogen" style="font-size: 17px"><b>Nitrogen</b></label>
+              <input
+                type="number"
+                class="form-control"
+                id="Nitrogen"
+                name="nitrogen"
+                placeholder="Enter the value (example:50)"
+                style="font-weight: bold"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="Phosphorous" style="font-size: 17px"
+                ><b>Phosphorous</b></label
+              >
+              <input
+                type="number"
+                class="form-control"
+                id="Phosphorous"
+                name="phosphorous"
+                placeholder="Enter the value (example:50)"
+                style="font-weight: bold"
+                required
+              />
+            </div>
+        
+            <div class="form-group">
+              <label for="Pottasium" style="font-size: 17px"><b>Pottasium</b></label>
+              <input
+                type="number"
+                class="form-control"
+                id="Pottasium"
+                name="pottasium"
+                placeholder="Enter the value (example:50)"
+                style="font-weight: bold"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="ph" style="font-size: 17px"><b>ph level</b></label>
+              <input
+                type="number"
+                step="0.01"
+                class="form-control"
+                id="ph"
+                name="ph"
+                placeholder="Enter the value"
+                style="font-weight: bold"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="Rainfall" style="font-size: 17px"><b>Rainfall (in mm)</b></label>
+              <input
+                type="number"
+                step="0.01"
+                class="form-control"
+                id="Rainfall"
+                name="rainfall"
+                placeholder="Enter the value"
+                style="font-weight: bold"
+                required
+              />
+            </div>
+            <button
+        type="submit"
+        class="btn btn-info"
+        style="color: black; font-weight: bold; width: 130px; height:50px; border-radius:12px; font-size: 21px;"
+        
+      >
+        Predict
+      </button>
+            </form>
+        </div>
+      </section>
+      <section class="weather-part">
+        <div class="box">
+
+          <div class="weatherbox">
+            <img src="" alt="Weather Icon" />
+            <div class="temp">
+              <span class="numb">_</span>
+              <span class="deg">°</span>C
+            </div>
+            <div class="weather">_ _</div>
+            <div class="location">
+              <i class="bx bx-map"></i>
+              <span>_, _</span>
+            </div>
+          </div>
+          <div class="crop-pred">
+            <img src="../static/images/pixel.jpg"  style="border-radius: 8px; ">
+          </div>
+        </div>
+      
+        <div class="bottom-details">
+          <div class="column feels">
+            <i class="bx bxs-thermometer"></i>
+            <div class="details">
+              <div class="temp">
+                <span class="numb-2">_</span>
+                <span class="deg">°</span>C
+              </div>
+              <p>Feels like</p>
+            </div>
+          </div>
+          <div class="column humidity">
+            <i class="bx bxs-droplet-half"></i>
+            <div class="details">
+              <span>_</span>
+              <p>Humidity</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    
+    <!--=========== SCRIPTS ===========-->
+    <script >
+      
+      const wrapper = document.querySelector(".wrapper"),
+      inputPart = document.querySelector(".input-part"),
+      infoTxt = inputPart.querySelector(".info-txt"),
+      inputField = inputPart.querySelector("input"),
+      locationBtn = inputPart.querySelector("button"),
+      weatherPart = wrapper.querySelector(".weather-part"),
+      wIcon = weatherPart.querySelector("img");
+      // arrowBack = wrapper.querySelector("header i");
+      let N= 50.5518;
+      let P= 55.3627;
+      let K= 48.1490;
+    
+      const features={
+        "Andaman and Nicobar Islands":{
+          ph: 6.00,
+          rain: 151.21
+        },
+        "Andhra Pradesh":{
+          ph: 7.00,
+          rain: 47.54
+        },
+        "Arunachal Pradesh":{
+          ph: 5.00,
+          rain: 170.79
+        },
+        "Assam":{
+          ph: 5.10,
+          rain: 145.83
+        },
+        "Bihar":{
+          ph: 5.60,
+          rain: 31.22
+        },
+        "Chandigarh":{
+          ph: 8.2,
+          rain: 55.65
+        },
+        "Chhattisgarh":{
+          ph: 6.6,
+          rain: 67.04
+        },
+        "Dadra and Nagar Haveli":{
+          ph: 7,
+          rain: 107.00
+        },
+        "Daman and Diu":{
+          ph: 7,
+          rain: 48.45
+        },
+        "Delhi":{
+          ph: 5.5,
+          rain: 20.88
+        },
+        "Goa":{
+          ph: 6,
+          rain: 118.42
+        },
+        "Gujarat":{
+          ph: 7.67,
+          rain: 49.06
+        },
+        "Haryana":{
+          ph: 8,
+          rain: 21.34
+        },
+        "Himachal Pradesh":{
+          ph: 7.5,
+          rain: 105.62
+        },
+        "Jammu and Kashmir":{
+          ph: 7.07,
+          rain: 40.73
+        },
+        "Jharkhand":{
+          ph: 5.6,
+          rain: 70.76
+        },
+        "Karnataka":{
+          ph: 7.5,
+          rain: 45.58
+        },
+        "Kerala":{
+          ph: 5,
+          rain: 128.31
+        },
+        "Ladakh":{
+          ph: 8.5,
+          rain: 34.93
+        },
+        "Lakshadweep":{
+          ph: 6,
+          rain: 90.35
+        },
+        "Madhya Pradesh":{
+          ph: 7.8,
+          rain: 66.21
+        },
+        "Maharashtra":{
+          ph: 6,
+          rain: 64.14
+        },
+        "Manipur":{
+          ph: 5.5,
+          rain: 110.92
+        },
+        "Meghalaya":{
+          ph: 5,
+          rain: 301.2
+        },
+        "Mizoram":{
+          ph: 5.7,
+          rain: 128.9
+        },
+        "Nagaland":{
+          ph: 5.5,
+          rain: 171.22
+        },
+        "Odisha":{
+          ph: 8,
+          rain: 71.43
+        },
+        "Puducherry":{
+          ph: 6.2,
+          rain: 86.17
+        },
+        "Punjab":{
+          ph: 8.2,
+          rain: 150
+        },
+        "Rajasthan":{
+          ph: 8.6,
+          rain: 25.43
+        },
+        "Sikkim":{
+          ph: 5.8,
+          rain: 105.45
+        },
+        "Tamil Nadu":{
+          ph: 8.3,
+          rain: 49.63
+        },
+        "Telangana":{
+          ph: 7.9,
+          rain: 63.73
+        },
+        "Tripura":{
+          ph: 5.8,
+          rain: 203.39
+        },
+        "Uttar Pradesh":{
+          ph: 7.1,
+          rain: 43.33
+        },
+        "Uttarakhand":{
+          ph: 6.38,
+          rain: 92.31
+        },
+        "West Bengal":{
+          ph: 6.2,
+          rain: 47.89
+        }
+    }
+    
+    let temperature_val;
+    let humidity_val;
+    
+    let api;
+    
+    //PLEASE PUT YOUR API KEY HERE
+    let apiKey = "10436c6acff0c83f9ea4b3a2558ff8a6";
+    
+    inputField.addEventListener("keyup", (e) => {
+      // if user pressed enter btn and input value is not empty
+      if (e.key == "Enter" && inputField.value != "") {
+        requestApi(inputField.value);
+        getloc();
+      }
+    });
+    
+    locationBtn.addEventListener("click", () => {
+      if (navigator.geolocation) {
+        // if browser support geolocation api
+        requestApi(inputField.value);
+      } else {
+        alert("Your browser does not support geolocation api");
+      }
+      getloc();
+    });
+    
+    function requestApi(city) {
+      api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+      fetchData();
+    }
+    
+    function onSuccess(position) {
+      const { latitude, longitude } = position.coords; // getting lat and lon of the user device from coords obj
+      api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${apiKey}`;
+      fetchData();
+    }
+    
+    function onError(error) {
+      // if any error occur while getting user location then we'll show it in infoText
+      infoTxt.innerText = error.message;
+      infoTxt.classList.add("error");
+    }
+    
+    function fetchData() {
+      infoTxt.innerText = "Getting weather details...";
+      infoTxt.classList.add("pending");
+      // getting api response and returning it with parsing into js obj and in another
+      // then function calling weatherDetails function with passing api result as an argument
+      
+      fetch(api)
+        .then((res) => res.json())
+        .then((result) => weatherDetails(result))
+        .catch(() => {
+          infoTxt.innerText = "Something went wrong";
+          infoTxt.classList.replace("pending", "error");
+        });
+    }
+    
+    function weatherDetails(info) {
+      if (info.cod == "404") {
+        // if user entered city name isn't valid
+        infoTxt.classList.replace("pending", "error");
+        infoTxt.innerText = `${inputField.value} isn't a valid city name`;
+      } else {
+        //getting required properties value from the whole weather information
+        const city = info.name;
+        const country = info.sys.country;
+        const { description, id } = info.weather[0];
+        const { temp, feels_like, temp_min, temp_max, humidity } = info.main;
+        temperature_val=temp;
+        humidity_val=humidity;
+        // using custom weather icon according to the id which api gives to us
+        if (id == 800) {
+          wIcon.src = "../static/images/clear.svg";
+        } else if (id >= 200 && id <= 232) {
+          wIcon.src = "../static/images/storm.svg";
+        } else if (id >= 600 && id <= 622) {
+          wIcon.src = "../static/images/snow.svg";
+        } else if (id >= 701 && id <= 781) {
+          wIcon.src = "../static/images/haze.svg";
+        } else if (id >= 801 && id <= 804) {
+          wIcon.src = "../static/images/cloud.svg";
+        } else if ((id >= 500 && id <= 531) || (id >= 300 && id <= 321)) {
+          wIcon.src = "../static/images/rain.svg";
+        }
+        
+        //passing a particular weather info to a particular element
+        weatherPart.querySelector(".temp .numb").innerText = Math.floor(temp);
+        weatherPart.querySelector(".weather").innerText = description;
+        weatherPart.querySelector(".location span").innerText = `${city}, ${country}`;
+        weatherPart.querySelector(".temp .numb-2").innerText =Math.floor(feels_like);
+        weatherPart.querySelector(".humidity span").innerText = `${humidity}%`;
+        infoTxt.classList.remove("pending", "error");
+        infoTxt.innerText = "";
+        inputField.value = "";
+        wrapper.classList.add("active");
+        }
+      }
+      
+    let ph_val;
+    let rain_val;
+      async function getloc(){
+        let url2='https://ipinfo.io/json?token=eb8939ae17feee'
+        let response= await fetch(url2)
+        let data2= await response.json()
+        console.log(data2.region);
+        let state=data2.region;
+        ph_val=features[state].ph;
+        rain_val=features[state].rain;
+        console.log(ph_val," ",rain_val);
+        // let a="Madhya Pradesh";
+        // console.log(features[a]);
+        weatherPart.querySelector(".ph span").innerText=ph_val;
+        weatherPart.querySelector(".rain span").innerText=`${rain_val}mm`;
+      }
+    </script>
+  </body>
+</html>

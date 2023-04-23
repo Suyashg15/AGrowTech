@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .mySlides {display:none}
+        .w3-left, .w3-right, .w3-badge {cursor:pointer}
+        .w3-badge {height:13px;width:13px;padding:0}
+        </style>
+    <link rel="stylesheet" href="../static/styles/style_irri.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irrigation</title>
+</head>
+<body>
+    
+    <nav>
+        <h1>AGrowTech</h1>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="{{url_for('crop_recommend')}}">Crop & Weather</a></li>
+          <li><a href="{{url_for('irrigation')}}">Irrigation</a></li>
+          <li><a href="/">Disease</a></li>
+        </ul>
+    </nav>
+    <div class="row">
+        <div class="column">
+          <div id="google_translate_element"></div>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+    </script>
+    
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+            <div class="w3-content w3-display-container" style="max-width:800px">
+                <img  class="mySlides" src="../static/images/Dice (2).jpg" style="width:100%; height: auto;">
+                <img  class="mySlides" src="../static/images/Dice (3).jpg" style="width:100%; height: auto;">
+                <img  class="mySlides" src="../static/images/space station with a glass greenhouse cap that is .jpg" style="width:100%; height: auto;">
+                <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%; ">
+                  <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+                  <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+                  <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+                  <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+                  <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+                </div>
+              </div>
+              
+              <script>
+              var slideIndex = 1;
+              showDivs(slideIndex);
+              
+              function plusDivs(n) {
+                showDivs(slideIndex += n);
+              }
+              
+              function currentDiv(n) {
+                showDivs(slideIndex = n);
+              }
+              
+              function showDivs(n) {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("demo");
+                if (n > x.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = x.length}
+                for (i = 0; i < x.length; i++) {
+                  x[i].style.display = "none";  
+                }
+                for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" w3-white", "");
+                }
+                x[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " w3-white";
+              }
+              </script>
+              
+        </div>
+        
+        <div class="column">
+          <h2>Irrigation & AI</h2>
+          <p style="font-size: 20px;">Irrigation is a critical process in agriculture that involves the application of water to crops to improve their yield and quality. Traditionally, farmers have relied on their experience and intuition to determine when and how much water to apply to their crops. However, with the advent of machine learning and artificial intelligence (AI), irrigation management can now be optimized using data-driven techniques.
+            <br><br>
+            Machine learning algorithms can analyze data from sensors installed in the field, such as soil moisture, temperature, and humidity, to develop models that predict crop water requirements. These models can be used to schedule irrigation based on real-time conditions, ensuring that crops receive the right amount of water at the right time.
+            <br><br>
+            Moreover, AI-based irrigation systems can also take into account external factors such as weather forecasts, plant growth stages, and soil properties to adjust irrigation schedules automatically. This not only improves crop yields but also conserves water resources by reducing over-irrigation.
+            <br><br>
+            In summary, machine learning and AI have the potential to revolutionize irrigation management by optimizing water use efficiency and improving crop yields.</p>
+        </div>
+    </div>      
+    <h2 style="text-align: center;">More In Arduino Hardware Project...</h2>
+
+
+</body>
+</html>
