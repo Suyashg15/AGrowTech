@@ -1,0 +1,9 @@
+
+pip install requests
+pip install config
+pip install numpy
+pip install Flask Jinja2
+pip install torch
+pip install torchvision
+pip install scikit-learn==1.2.2
+pip install lightgbm
