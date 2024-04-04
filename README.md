@@ -27,6 +27,9 @@ use of deep convolutional networks. The developed model is able to recognize 38 
 - `Src` : All The source code for building models
 - `Models` : All the Pretrained Models of Pytorch
 
+## Website Working ScreenShorts:
+## <img src="" alt="img1"/>
+
 
 
 
