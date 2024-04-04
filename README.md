@@ -28,8 +28,8 @@ use of deep convolutional networks. The developed model is able to recognize 38 
 - `Models` : All the Pretrained Models of Pytorch
 
 ## Website Working ScreenShorts:
-## <img src="./Assets/agrow.jpeg" alt="img1"/>
-## <img src="./Assets/agrow1.jpeg" alt="img1"/>
-## <img src="./Assets/ag2.jpeg" alt="img1"/>
-## <img src="./Assets/ag3.jpeg" alt="img1"/>
-## <img src="./Assets/ag4.jpeg" alt="img1"/>
+## <img src="./Assets/agrow.jpg" alt="img1"/>
+## <img src="./Assets/agrow1.jpg" alt="img1"/>
+## <img src="./Assets/ag2.jpg" alt="img1"/>
+## <img src="./Assets/ag3.jpg" alt="img1"/>
+## <img src="./Assets/ag4.jpg" alt="img1"/>
